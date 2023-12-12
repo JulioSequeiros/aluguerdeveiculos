@@ -16,33 +16,37 @@ import {
     IonCard,
     IonSelect,
     IonSelectOption,
-    IonList, IonItem, IonLabel, IonBadge, IonNote
+    IonList, IonItem, IonLabel, IonBadge, IonNote, IonButton
 } from "@ionic/react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {getCarro} from "../Utils/Utils";
 import {checkmark} from "ionicons/icons";
 
-interface Carro extends Carro {
+interface Carro {
     id: number;
     modelo: string;
     marca: string;
-    categoria: string[];
+    categoria: string;
 }
 
 const Frota: React.FC = () => {
 
-    const [ Badge, setBadge ] = useState(true);
-    const [itemSelected, setItemSelected] = useState<Carro| null>(null);
+    const [filtro, setFiltro] = useState<string>('');
+    const [carrosFiltrados, setCarrosFiltrados] = useState<string[]>([]);
 
-    const inboxItems = getCarro();
+    useEffect(() =>{
+        //ler da utils todos os carros
+        const todosOsCarros = getCarro(); //Utils
 
-    const handleClickCategoria = async (item : Carro) => {
-        setItemSelected(item)
-    }
-
-    const handleCloseModal = () => {
-        setItemSelected(null);
-    };
+        //Se houver filtro
+        if (filtro !== '') {
+            if (carrosFiltrados) {
+                const carrosFiltrados = todosOsCarros().filter((carro) => carro.categoria === carrosFiltrados);
+                setCarrosFiltrados(carrosFiltrados);
+                setCarrosFiltrados(true);
+            }
+        }
+    }, [filtro]);
 
     return (
         <IonPage>
@@ -60,23 +64,31 @@ const Frota: React.FC = () => {
                         <IonTitle size="large">Frota</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <IonList>
-                    { inboxItems.map((item, index,) => {
-
-                        return (
-                            <IonItem onClick={() => handleClickCategoria(item)} key={ `item_${ index }`} detail={ true } lines="full" detailIcon={ checkmark }>
-                                <IonLabel>
-                                    <h2>{ item.categoria }</h2>
-                                </IonLabel>
-                                { Badge &&
-                                    <IonBadge slot="end" style={{ fontSize: "1rem" }}>
-                                        Ver Mais
-                                    </IonBadge>
-                                }
+                <IonSelect aria-label="Categoria" placeholder="Selecione a Categoria" onIonChange={(ev) => console.log('Current value:', JSON.stringify(ev.detail.value))}>
+                    {carrosFiltrados.length > 0 &&
+                        carrosFiltrados.map((carro, index) => (
+                        <IonSelectOption key={carro.id} value={carro.id}>
+                            {carro.categoria}
+                        </IonSelectOption>
+                    ))}
+                </IonSelect>
+                <IonGrid fixed={true}>
+                    <IonRow>
+                        <IonCol>
+                            <IonItem>
+                                <IonCard>
+                                    <IonCardHeader>
+                                        <IonCardTitle>{carro.modelo}</IonCardTitle>
+                                        <IonCardSubtitle>{carro.marca}</IonCardSubtitle>
+                                    </IonCardHeader>
+                                    <IonButton fill="clear">Loja</IonButton>
+                                </IonCard>
                             </IonItem>
-                        );
-                    })}
-                </IonList>
+                        </IonCol>
+                        <IonCol>
+                        </IonCol>
+                    </IonRow>
+                </IonGrid>
             </IonContent>
         </IonPage>
     );
