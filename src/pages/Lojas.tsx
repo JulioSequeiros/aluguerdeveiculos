@@ -11,7 +11,7 @@ import {
     IonCard,
     IonCardHeader,
     IonCardSubtitle,
-    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel,
+    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel, IonMenuButton,
 } from '@ionic/react';
 
 interface Store {
@@ -73,7 +73,7 @@ const Lojas: React.FC = () => {
             <IonHeader>
                 <IonToolbar>
                     <IonButtons slot="start">
-                        <IonSearchbar />
+                        <IonMenuButton />
                     </IonButtons>
                     <IonTitle>Lojas</IonTitle>
                 </IonToolbar>
