@@ -1,6 +1,6 @@
 import {
     IonButton,
-    IonButtons, IonCard, IonCol,
+    IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol,
     IonContent, IonGrid,
     IonHeader, IonIcon, IonImg,
     IonMenuButton,
@@ -52,39 +52,33 @@ return (
             <IonGrid>
             <IonRow>
                 <IonCol>
-                    <h2>🚩</h2>
-                </IonCol>
-                <IonCol>
-                    <IonButton>
-                        <IonIcon slot="icon-only" name="map" />
-                        Navegar para a loja mais próxima
-                    </IonButton>
-                </IonCol>
-            </IonRow>
-            <IonRow>
-                <IonCol>
                     <IonText>
-                        <h2>Apresentação da empresa</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                            tincidunt, neque sit amet fermentum scelerisque, eros urna
-                            tristique neque, ac dapibus eros risus sed sapien. Aliquam
-                            fermentum, arcu vel luctus scelerisque, leo enim semper
+                            Happy Car Renty é uma empresa de aluguer de automóveis que se dedica a proporcionar uma experiência de aluguer de automóveis agradável e acessível. A empresa oferece uma ampla gama de veículos para atender às necessidades de todos os clientes, incluindo carros económicos, carros de luxo, carros desportivos e veículos
                         </p>
                         <IonRow>
                             <IonCol>
-                                <IonImg src="https://example.com/images/black-friday.png" />
+                                <IonIcon name="pin-outline"></IonIcon>
                             </IonCol>
                             <IonCol>
                                 <IonButton>
-                                    <IonIcon slot="icon-only" name="card" />
-                                    Saiba mais sobre a Black Friday
+                                    <IonIcon slot="icon-only" name="map" />
+                                    Navegar para a loja mais próxima
+                                </IonButton>
+                            </IonCol>
+                            <IonCol>
+                                <IonIcon name="car-outline"></IonIcon>
+                            </IonCol>
+                            <IonCol>
+                                <IonButton routerLink="./Frota">
+                                    <IonIcon slot="icon-only" name="car" />
+                                    Conheça nossos novos carros
                                 </IonButton>
                             </IonCol>
                         </IonRow>
                         <IonRow>
                             <IonCol>
-                                <IonImg src="https://example.com/images/awards.png" />
+                                <IonIcon name="trophy-outline"></IonIcon>
                             </IonCol>
                             <IonCol>
                                 <IonButton>
@@ -95,13 +89,17 @@ return (
                         </IonRow>
                             <IonRow>
                                 <IonCol>
-                                    <IonImg src="https://example.com/images/cars.png" />
-                                </IonCol>
-                                <IonCol>
-                                    <IonButton routerLink="./Frota">
-                                        <IonIcon slot="icon-only" name="car" />
-                                        Conheça nossos novos carros
-                                    </IonButton>
+                                    <IonCard>
+                                        <IonCardHeader>
+                                            <IonIcon name="pricetags-outline"></IonIcon>
+                                            <IonCardTitle>Promoção Black Friday</IonCardTitle>
+                                            <IonCardSubtitle>
+                                                <p>20/11/2023</p>
+                                                <p>Aproveite o desconto de Black friday no alugamento de um veiculo a sua escolha!</p>
+                                            </IonCardSubtitle>
+                                        </IonCardHeader>
+                                        <IonButton fill="clear">Saber Mais</IonButton>
+                                    </IonCard>
                                 </IonCol>
                             </IonRow>
                         </IonText>
