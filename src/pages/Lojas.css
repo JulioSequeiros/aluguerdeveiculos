@@ -1,3 +1,6 @@
 ion-item {
     --padding-start: 0;
 }
+ion-button{
+    background-color: orangered;
+}

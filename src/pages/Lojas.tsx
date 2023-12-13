@@ -13,7 +13,7 @@ import {
     IonCardSubtitle,
     IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel, IonMenuButton, IonGrid, IonRow, IonCol,
 } from '@ionic/react';
-
+import './Lojas.css';
 interface Store {
     name: string;
     address: string;
@@ -28,7 +28,7 @@ const Lojas: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
 
-    const [searchTerm, setSearchTerm] = useState('');
+
     const handleOpenModal = (store: Store) => {
         setSelectedStore(store);
         setShowModal(true);
@@ -38,9 +38,7 @@ const Lojas: React.FC = () => {
         setShowModal(false);
         setSelectedStore(null);
     };
-    const handleSearchBarInput = (event: any) => {
-        setSearchTerm(event.detail.value);
-    };
+
     const stores = [
         {
             name: "Viana",
@@ -63,11 +61,7 @@ const Lojas: React.FC = () => {
             imagem: "https://revistaazul.voeazul.com.br/wp-content/uploads/2023/03/Lisboa.jpg",
         },
     ];
-    const filteredStores = stores.filter((store) =>
-        store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        store.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        store.imagem.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+
     return (
         <IonPage>
             <IonHeader>
@@ -90,8 +84,8 @@ const Lojas: React.FC = () => {
                                         <p>{store.address}</p>
                                     </IonCol>
                                     <IonCol>
-                                        <IonButton onClick={() => handleOpenModal(store)}>Mais informações</IonButton>
-                                        <IonButton routerLink="./Frota">Frota</IonButton>
+                                        <IonButton onClick={() => handleOpenModal(store)} color={'red'}>Mais informações</IonButton>
+                                        <IonButton routerLink="./Frota" color={'red'}>Frota</IonButton>
                                     </IonCol>
                                 </IonRow>
                             </IonGrid>
