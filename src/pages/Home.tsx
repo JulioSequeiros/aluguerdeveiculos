@@ -100,7 +100,7 @@ return (
                                 <IonCol>
                                     <IonButton>
                                         <IonIcon slot="icon-only" name="car" />
-                                        Conheça os nossos carros
+                                        Conheça nossos novos carros
                                     </IonButton>
                                 </IonCol>
                             </IonRow>
