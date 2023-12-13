@@ -11,10 +11,6 @@ import {
 import { Geolocation } from '@capacitor/geolocation';
 import React, {useEffect, useState} from "react";
 
-function IonCardContent(props: { children: ReactNode }) {
-    return null;
-}
-
 const Home: React.FC = () => {
 
     const [latitude, setLatitude] = useState(null);
@@ -58,7 +54,7 @@ return (
                 <IonCol>
                     <IonText>
                         <p>
-                            Happy Car Renty é uma empresa de aluguer de automóveis que se dedica a proporcionar uma experiência de aluguer de automóveis agradável e acessível. A empresa oferece uma ampla gama de veículos para atender às necessidades de todos os clientes, incluindo carros económicos, carros de luxo, carros desportivos e veículos <comerciais className=""></comerciais>
+                            Happy Car Renty é uma empresa de aluguer de automóveis que se dedica a proporcionar uma experiência de aluguer de automóveis agradável e acessível. A empresa oferece uma ampla gama de veículos para atender às necessidades de todos os clientes, incluindo carros económicos, carros de luxo, carros desportivos e veículos
                         </p>
                         <IonRow>
                             <IonCol>
