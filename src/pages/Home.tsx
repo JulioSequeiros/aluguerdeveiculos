@@ -91,14 +91,14 @@ return (
                                     <IonCard>
                                         <IonCardHeader>
                                             <IonIcon name="pricetags-outline"></IonIcon>
-                                            <IonCardTitle>Promoção Black Friday</IonCardTitle>
-                                            <IonCardSubtitle>
-                                                <p>20/11/2023</p>
-                                                <p>Aproveite o desconto de Black friday no alugamento de um veiculo a sua escolha!</p>
-                                            </IonCardSubtitle>
-                                        </IonCardHeader>
-                                        <IonButton fill="clear">Saber Mais</IonButton>
-                                    </IonCard>
+                                                <IonCardTitle>Promoção Black Friday</IonCardTitle>
+                                                    <IonCardSubtitle>
+                                                    <p>20/11/2023</p>
+                                                    <p>Aproveite o desconto de Black friday no alugamento de um veiculo a sua escolha!</p>
+                                        </IonCardSubtitle>
+                                    </IonCardHeader>
+                                <IonButton fill="clear">Saber Mais</IonButton>
+                            </IonCard>
                         </IonText>
                     </IonCol>
                 </IonRow>
