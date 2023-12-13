@@ -15,7 +15,7 @@ import {
     IonImg,
     IonGrid,
     IonRow,
-    IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent,
+    IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText,
 } from '@ionic/react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
@@ -64,7 +64,7 @@ const Frota: React.FC = () => {
                 descricao: "O Onix Plus é um carro sedan compacto da Chevrolet. Ele possui um motor 1.0 Turbo de 116 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O Onix Plus está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Chevrolet_Onix_007.jpg/300px-Chevrolet_Onix_007.jpg"
+                imagem: "https://quatrorodas.abril.com.br/wp-content/uploads/2019/09/fgd_9712.tif_-e1569946637718.jpg?quality=70&strip=info"
             },
             {
                 marca: "Hyundai",
@@ -273,12 +273,8 @@ const Frota: React.FC = () => {
                         <IonContent>
                             <IonTitle><h2>{selectedCar.marca}</h2></IonTitle>
                             <IonImg src={selectedCar.imagem}></IonImg>
+                            <IonTitle><h3>{selectedCar.modelo}</h3></IonTitle>
                             <IonGrid>
-                                <IonRow>
-                                    <IonCol>
-                                        <IonTitle><h3>{selectedCar.modelo}</h3></IonTitle>
-                                    </IonCol>
-                                </IonRow>
                                 <IonRow>
                                     <IonCol>
                                         <IonLabel><p>{selectedCar.informacao}</p></IonLabel>
@@ -289,8 +285,21 @@ const Frota: React.FC = () => {
                                         <IonLabel><p>{selectedCar.descricao}</p></IonLabel>
                                     </IonCol>
                                 </IonRow>
+                                <IonRow>
+                                    <IonCol>
+                                        <IonLabel><p>{selectedCar.descricao}</p></IonLabel>
+                                    </IonCol>
+                                </IonRow>
+                                    <IonRow>
+                                    <IonCol>
+                                        <IonButton onClick={handleCloseModal}>Fechar</IonButton>
+                                    </IonCol>
+                                    <IonCol>
+                                        <IonText>Preço P/Dia:</IonText>
+                                        <IonButton onClick={handleCloseModal}>Alugar: {selectedCar.precodiario}</IonButton>
+                                    </IonCol>
+                                </IonRow>
                             </IonGrid>
-                            <IonButton onClick={handleCloseModal}>Fechar</IonButton>
                         </IonContent>
                     </IonModal>
                 )}
