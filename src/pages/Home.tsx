@@ -1,6 +1,6 @@
 import {
     IonButton,
-    IonButtons, IonCard, IonCol,
+    IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol,
     IonContent, IonGrid,
     IonHeader, IonIcon, IonImg,
     IonMenuButton,
@@ -10,6 +10,10 @@ import {
 } from "@ionic/react";
 import { Geolocation } from '@capacitor/geolocation';
 import React, {useEffect, useState} from "react";
+
+function IonCardContent(props: { children: ReactNode }) {
+    return null;
+}
 
 const Home: React.FC = () => {
 
@@ -89,10 +93,17 @@ return (
                         </IonRow>
                             <IonRow>
                                 <IonCol>
-                                    <IonIcon name="pricetags-outline"></IonIcon>
-                                </IonCol>
-                                <IonCol>
-                                    <IonTitle>mais sobre a Black Friday</IonTitle>
+                                    <IonCard>
+                                        <IonCardHeader>
+                                            <IonIcon name="pricetags-outline"></IonIcon>
+                                            <IonCardTitle>Promoção Black Friday</IonCardTitle>
+                                            <IonCardSubtitle>
+                                                <p>20/11/2023</p>
+                                                <p>Aproveite o desconto de Black friday no alugamento de um veiculo a sua escolha!</p>
+                                            </IonCardSubtitle>
+                                        </IonCardHeader>
+                                        <IonButton fill="clear">Saber Mais</IonButton>
+                                    </IonCard>
                                 </IonCol>
                             </IonRow>
                         </IonText>
