@@ -2,5 +2,13 @@ ion-item {
     --padding-start: 0;
 }
 ion-button{
+    background-color: grey;
+}
+
+ion-button:hover{
     background-color: orangered;
+}
+
+ion-row{
+    margin-bottom: 25px;
 }

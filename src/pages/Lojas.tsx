@@ -38,7 +38,9 @@ const Lojas: React.FC = () => {
         setShowModal(false);
         setSelectedStore(null);
     };
-
+    const handleExitModal = () => {
+        setShowModal(false);
+    };
     const stores = [
         {
             name: "Viana",
@@ -96,9 +98,10 @@ const Lojas: React.FC = () => {
                 {selectedStore && (
                     <IonModal isOpen={showModal} onDidDismiss={handleCloseModal}>
                         <IonContent>
-                            <IonTitle><h2>{selectedStore.name}</h2></IonTitle>
-                            <IonImg src={selectedStore.imagem}></IonImg>
-                            <IonLabel>{selectedStore.address}</IonLabel>
+                            <IonRow><IonTitle><h2>{selectedStore.name}</h2></IonTitle></IonRow>
+                            <IonRow><IonImg src={selectedStore.imagem}></IonImg></IonRow>
+                            <IonRow><IonLabel>{selectedStore.address}</IonLabel></IonRow>
+                            <IonRow><IonButton onClick={handleExitModal} color={'red'}>Sair</IonButton></IonRow>
                         </IonContent>
                     </IonModal>
                 )}
