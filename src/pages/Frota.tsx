@@ -140,7 +140,7 @@ const Frota: React.FC = () => {
                 descricao: "O Q3 é um SUV compacto da Audi. Ele possui um motor 1.4 TSI de 150 cv, uma transmissão automática de 7 velocidades e um consumo médio de 7,0 litros por 100 km.",
                 informacao: "O Q3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2023_Audi_Q3_Sedan.jpg/1200px-2023_Audi_Q3_Sedan.jpg"
+                imagem: "https://cf-cdn-v6-api.audi.at/files/951084a2348cbbfcbfa37fcfc84d5d841ae30477/f671e38e-4174-4e19-a2a1-5d955c40f620/1920x1080-audi-q3-ecirgbv22018audiq3stjohnsal14nosign?imwidth=768"
             },
             {
                 marca: "BMW",
@@ -148,7 +148,7 @@ const Frota: React.FC = () => {
                 descricao: "O X1 é um SUV compacto da BMW. Ele possui um motor 2.0 TwinPower Turbo de 184 cv, uma transmissão automática de 8 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O X1 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/2023_BMW_X1_Sedan.jpg/1200px-2023_BMW_X1_Sedan.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BMW_U11_1X7A6826.jpg/1920px-BMW_U11_1X7A6826.jpg"
             },
             {
                 marca: "Mercedes-Benz",
@@ -156,7 +156,7 @@ const Frota: React.FC = () => {
                 descricao: "O GLA é um SUV compacto da Mercedes-Benz. Ele possui um motor 1.3 Turbo de 160 cv, uma transmissão automática de 7 velocidades e um consumo médio de 6,5 litros por 100 km.",
                 informacao: "O GLA está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2023_Mercedes-Benz_GLA_Sedan.jpg/1200px-2023_Mercedes-Benz_GLA_Sedan.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mercedes-Benz_H247_IMG_2800.jpg/1280px-Mercedes-Benz_H247_IMG_2800.jpg"
             },
             {
                 marca: "Volkswagen",
@@ -164,7 +164,7 @@ const Frota: React.FC = () => {
                 descricao: "O T-Cross é um SUV compacto da Volkswagen. Ele possui um motor 1.0 TSI de 116 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 6,0 litros por 100 km.",
                 informacao: "O T-Cross está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/2023_Volkswagen_T-Cross_Sedan.jpg/1200px-2023_Volkswagen_T-Cross_Sedan.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg/1920px-2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg"
             },
             {
                 marca: "Peugeot",
@@ -172,7 +172,7 @@ const Frota: React.FC = () => {
                 descricao: "O 2008 é um SUV compacto da Peugeot. Ele possui um motor 1.2 PureTech de 110 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O 2008 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/2023_Peugeot_2008_Sedan.jpg/1200px-2023_Peugeot_2008_Sedan.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/2020_Peugeot_2008_Allure_Front.jpg/1920px-2020_Peugeot_2008_Allure_Front.jpg"
             },
         ],
         Eletrico: [
