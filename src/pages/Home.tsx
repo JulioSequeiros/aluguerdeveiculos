@@ -6,9 +6,10 @@ import {
     IonMenuButton,
     IonPage, IonRow, IonText,
     IonTitle,
-    IonToolbar
+    IonToolbar,
 } from "@ionic/react";
 import { Geolocation } from '@capacitor/geolocation';
+import { logoIonic } from 'ionicons/icons';
 import React, {useEffect, useState} from "react";
 
 const Home: React.FC = () => {
