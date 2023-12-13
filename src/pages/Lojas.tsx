@@ -11,7 +11,7 @@ import {
     IonCard,
     IonCardHeader,
     IonCardSubtitle,
-    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage,
+    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel,
 } from '@ionic/react';
 
 interface Store {
@@ -20,19 +20,15 @@ interface Store {
     imagem: string;
 }
 
-const generateRandomPrice = () => {
-    const randomPrice = (Math.random() * (150 - 50) + 50).toFixed(2);
-    return `€${randomPrice}`;
-};
-
 function IonSubtitle(props: { children: ReactNode }) {
     return null;
 }
 
-const Frota: React.FC = () => {
+const Lojas: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
 
+    const [searchTerm, setSearchTerm] = useState('');
     const handleOpenModal = (store: Store) => {
         setSelectedStore(store);
         setShowModal(true);
@@ -42,30 +38,36 @@ const Frota: React.FC = () => {
         setShowModal(false);
         setSelectedStore(null);
     };
-
+    const handleSearchBarInput = (event: any) => {
+        setSearchTerm(event.detail.value);
+    };
     const stores = [
         {
-            name: "Loja 1",
+            name: "Viana do Castelo",
             address: "Rua da Loja, 123, Viana do Castelo",
-            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Viana_do_Castelo_Panorama.jpg/1200px-Viana_do_Castelo_Panorama.jpg",
+            imagem: "https://www.cm-viana-castelo.pt/wp-content/uploads/2023/07/DJI_0529-scaled.jpg",
         },
         {
-            name: "Loja 2",
+            name: "Porto",
             address: "Rua da Loja, 456, Porto",
-            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Porto_Panorama.jpg/1200px-Porto_Panorama.jpg",
+            imagem: "https://viagemegastronomia.cnnbrasil.com.br/wp-content/uploads/sites/5/2021/01/porto-portugal-guia.jpg",
         },
         {
-            name: "Loja 3",
+            name: "Braga",
             address: "Rua da Loja, 789, Braga",
-            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Braga_Panorama.jpg/1200px-Braga_Panorama.jpg",
+            imagem: "https://www.bloom-consulting.com/journal/wp-content/uploads/2020/01/braga-4852960_1280.jpg",
         },
         {
-            name: "Loja 4",
+            name: "Lisboa",
             address: "Rua da Loja, 1011, Lisboa",
-            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Lisboa_Panorama.jpg/1200px-Lisboa_Panorama.jpg",
+            imagem: "https://revistaazul.voeazul.com.br/wp-content/uploads/2023/03/Lisboa.jpg",
         },
     ];
-
+    const filteredStores = stores.filter((store) =>
+        store.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        store.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        store.imagem.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     return (
         <IonPage>
             <IonHeader>
@@ -84,6 +86,7 @@ const Frota: React.FC = () => {
                             <IonTitle>{store.name}</IonTitle>
                             <IonSubtitle>{store.address}</IonSubtitle>
                             <IonButton onClick={() => handleOpenModal(store)}>Mais informações</IonButton>
+                            <IonButton routerLink="./Frota">Frota</IonButton>
                         </IonItem>
                     ))}
                 </IonList>
@@ -93,6 +96,7 @@ const Frota: React.FC = () => {
                         <IonContent>
                             <IonTitle><h2>{selectedStore.name}</h2></IonTitle>
                             <IonImg src={selectedStore.imagem}></IonImg>
+                            <IonLabel>{selectedStore.address}</IonLabel>
                         </IonContent>
                     </IonModal>
                 )}
@@ -101,4 +105,4 @@ const Frota: React.FC = () => {
     );
 };
 
-export default Frota
+export default Lojas
