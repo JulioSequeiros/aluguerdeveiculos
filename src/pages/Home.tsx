@@ -7,9 +7,29 @@ import {
     IonTitle,
     IonToolbar
 } from "@ionic/react";
-import React from "react";
+import { Geolocation } from '@capacitor/geolocation';
+import React, {useEffect, useState} from "react";
 
 const Home: React.FC = () => {
+
+    const [latitude, setLatitude] = useState(null);
+    const [longitude, setLongitude] = useState(null);
+    const [store, setStore] = useState({
+        latitude: 0,
+        longitude: 0,
+        name: 'Loja mais próxima',
+        address: 'Rua da Loja, 123',
+        phone: '(123) 456-7890'
+    });
+
+    useEffect(() => {
+        // Obter a localização do usuário
+        Geolocation.getCurrentPosition().then((position) => {
+            // Atualizar a localização da loja mais próxima
+            setLatitude(position.coords.latitude);
+            setLongitude(position.coords.longitude);
+        });
+    }, []);
 
 return (
     <IonPage>
