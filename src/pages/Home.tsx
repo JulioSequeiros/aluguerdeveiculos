@@ -76,19 +76,18 @@ return (
                                 </IonButton>
                             </IonCol>
                         </IonRow>
-                        <IonRow>
-                            <IonCol>
-                                <IonIcon name="trophy-outline"></IonIcon>
-                            </IonCol>
-                            <IonCol>
-                                <IonButton>
-                                    <IonIcon slot="icon-only" name="star" />
-                                    Veja nossos prêmios
-                                </IonButton>
-                            </IonCol>
-                        </IonRow>
-                            <IonRow>
-                                <IonCol>
+                            <IonTitle>Ultimas Noticias</IonTitle>
+                                <IonCard>
+                                    <IonCardHeader>
+                                        <IonIcon name="trophy-outline"></IonIcon>
+                                        <IonCardTitle>Vencedores do Premio</IonCardTitle>
+                                        <IonCardSubtitle>
+                                            <p>10/12/2023</p>
+                                            <p>Happy Car Rent foi vencedor de melhor loja de alugamento de carros em Portugal!</p>
+                                        </IonCardSubtitle>
+                                    </IonCardHeader>
+                                    <IonButton fill="clear">Saber Mais</IonButton>
+                                </IonCard>
                                     <IonCard>
                                         <IonCardHeader>
                                             <IonIcon name="pricetags-outline"></IonIcon>
@@ -100,8 +99,6 @@ return (
                                         </IonCardHeader>
                                         <IonButton fill="clear">Saber Mais</IonButton>
                                     </IonCard>
-                                </IonCol>
-                            </IonRow>
                         </IonText>
                     </IonCol>
                 </IonRow>
