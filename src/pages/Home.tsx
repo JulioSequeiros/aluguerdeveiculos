@@ -98,7 +98,7 @@ return (
                                     <IonImg src="https://example.com/images/cars.png" />
                                 </IonCol>
                                 <IonCol>
-                                    <IonButton>
+                                    <IonButton routerLink="./Frota">
                                         <IonIcon slot="icon-only" name="car" />
                                         Conheça nossos novos carros
                                     </IonButton>
