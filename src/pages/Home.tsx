@@ -48,6 +48,7 @@ return (
                     <IonTitle size="large">Início</IonTitle>
                 </IonToolbar>
             </IonHeader>
+            <IonImg src="https://cdn.discordapp.com/attachments/1021814484437835837/1184194027667607622/loja.jpg?ex=658b15a1&is=6578a0a1&hm=b5edc80d1fc2e116eb36cf1206f078e58a882a11c9d5cebbcda58fa66d593a67&" />
             <IonGrid>
             <IonRow>
                 <IonCol>
