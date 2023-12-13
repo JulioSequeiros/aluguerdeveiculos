@@ -11,7 +11,7 @@ import {
     IonCard,
     IonCardHeader,
     IonCardSubtitle,
-    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel, IonMenuButton,
+    IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel, IonMenuButton, IonGrid, IonRow, IonCol,
 } from '@ionic/react';
 
 interface Store {
@@ -43,7 +43,7 @@ const Lojas: React.FC = () => {
     };
     const stores = [
         {
-            name: "Viana do Castelo",
+            name: "Viana",
             address: "Rua da Loja, 123, Viana do Castelo",
             imagem: "https://www.cm-viana-castelo.pt/wp-content/uploads/2023/07/DJI_0529-scaled.jpg",
         },
@@ -83,10 +83,18 @@ const Lojas: React.FC = () => {
                 <IonList>
                     {stores.map((store, index) => (
                         <IonItem key={index}>
-                            <IonTitle>{store.name}</IonTitle>
-                            <IonSubtitle>{store.address}</IonSubtitle>
-                            <IonButton onClick={() => handleOpenModal(store)}>Mais informações</IonButton>
-                            <IonButton routerLink="./Frota">Frota</IonButton>
+                            <IonGrid fixed={true}>
+                                <IonRow>
+                                    <IonCol>
+                                        <IonTitle>{store.name}</IonTitle>
+                                        <p>{store.address}</p>
+                                    </IonCol>
+                                    <IonCol>
+                                        <IonButton onClick={() => handleOpenModal(store)}>Mais informações</IonButton>
+                                        <IonButton routerLink="./Frota">Frota</IonButton>
+                                    </IonCol>
+                                </IonRow>
+                            </IonGrid>
                         </IonItem>
                     ))}
                 </IonList>

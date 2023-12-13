@@ -1,5 +1,5 @@
 import {
-    IonButtons,
+    IonButtons, IonCard,
     IonContent,
     IonHeader,
     IonMenuButton,
@@ -7,6 +7,7 @@ import {
     IonTitle,
     IonToolbar
 } from "@ionic/react";
+import React from "react";
 
 const Home: React.FC = () => {
 
