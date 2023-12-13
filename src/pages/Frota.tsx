@@ -98,7 +98,7 @@ const Frota: React.FC = () => {
                 descricao: "O RS 3 é um carro esportivo compacto da Audi. Ele possui um motor 2.5 TFSI de 400 cv, uma transmissão automática de 7 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O RS 3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/2020_Audi_RS_3_Sedan.jpg/1200px-2020_Audi_RS_3_Sedan.jpg"
+                imagem: "https://cdn.easysite.pt/pub/12777/1122893/EDN_NCAUTO_24223270-0.jpg"
             },
             {
                 marca: "BMW",
@@ -106,7 +106,7 @@ const Frota: React.FC = () => {
                 descricao: "O M2 é um carro esportivo compacto da BMW. Ele possui um motor 3.0 TwinPower Turbo de 410 cv, uma transmissão manual de 6 velocidades ou automática de 8 velocidades e um consumo médio de 8,0 litros por 100 km.",
                 informacao: "O M2 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2023_BMW_M2_Coupé.jpg/1200px-2023_BMW_M2_Coupé.jpg"
+                imagem: "https://www.motor24.pt/files/2019/11/bmw-m2-cs.jpg"
             },
             {
                 marca: "Mercedes-AMG",
@@ -114,7 +114,7 @@ const Frota: React.FC = () => {
                 descricao: "O A45 S é um carro esportivo compacto da Mercedes-AMG. Ele possui um motor 2.0 Turbo de 421 cv, uma transmissão automática de 8 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O A45 S está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/2023_Mercedes-AMG_A45_S_Sedan.jpg/1200px-2023_Mercedes-AMG_A45_S_Sedan.jpg"
+                imagem: "https://auto-drive.pt/wp-content/uploads/2020/04/posaidon-mercedes-amg-a45-with-518-hp-1.jpg"
             },
             {
                 marca: "Porsche",
@@ -122,7 +122,7 @@ const Frota: React.FC = () => {
                 descricao: "O 718 Cayman é um carro esportivo compacto da Porsche. Ele possui um motor 2.0 Turbo de 300 cv ou 350 cv, uma transmissão manual de 6 velocidades ou automática de 7 velocidades e um consumo médio de 7,0 a 7,5 litros por 100 km.",
                 informacao: "O 718 Cayman está disponível nas cores preto, branco, vermelho, azul, verde e amarelo.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/2023_Porsche_718_Cayman.jpg/1200px-2023_Porsche_718_Cayman.jpg"
+                imagem: "https://hips.hearstapps.com/hmg-prod/images/718-style-edition-18-1667334774.jpg?crop=0.598xw:0.671xh;0.244xw,0.0841xh&resize=768:*"
             },
             {
                 marca: "Audi",
@@ -130,7 +130,7 @@ const Frota: React.FC = () => {
                 descricao: "O RS Q8 é um carro esportivo SUV da Audi. Ele possui um motor 4.0 TFSI de 600 cv, uma transmissão automática de 8 velocidades e um consumo médio de 11,0 litros por 100 km.",
                 informacao: "O RS Q8 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/2023_Audi_RS_Q8.jpg/1200px-2023_Audi_RS_Q8.jpg"
+                imagem: "https://auto-drive.pt/wp-content/uploads/2022/04/08.webp"
             }
         ],
         SUV: [
@@ -182,7 +182,7 @@ const Frota: React.FC = () => {
                 descricao: "O Model 3 é um carro elétrico compacto da Tesla. Ele possui um motor elétrico de 286 cv, uma bateria de 58 kWh e um alcance de 460 km.",
                 informacao: "O Model 3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2023_Tesla_Model_3_Sedan.jpg/1200px-2023_Tesla_Model_3_Sedan.jpg"
+                imagem: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc9TuB0VRlXBTMqS9ZX8G-ohe_9QIccgYlWXuXuqvplCI_qYaTUB78aUeCIk4zu97nIPGgZjZpgjFanqCh5QREuEmq7fROlwS7MyDzB2ar4ud0NGNhR5SWihnIvSxB2V_T5Qe3u9aismr_qXhrflwVfUIyP11hSYUBYY0wjrgh9hbXAXo3O2MqOOmfqXID/s1600/model3highland.jpg"
             },
             {
                 marca: "Volkswagen",
@@ -190,7 +190,7 @@ const Frota: React.FC = () => {
                 descricao: "O ID.3 é um carro elétrico compacto da Volkswagen. Ele possui um motor elétrico de 204 cv, uma bateria de 58 kWh e um alcance de 420 km.",
                 informacao: "O ID.3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2023_Volkswagen_ID.3_Sedan.jpg/1200px-2023_Volkswagen_ID.3_Sedan.jpg"
+                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:750:750:nowe:383:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2021/01/25095205/volkswagen-id3-2020-2-14-min.jpg"
             },
             {
                 marca: "Hyundai",
@@ -198,7 +198,7 @@ const Frota: React.FC = () => {
                 descricao: "O Ioniq 5 é um carro elétrico compacto da Hyundai. Ele possui um motor elétrico de 218 cv, uma bateria de 77,4 kWh e um alcance de 480 km.",
                 informacao: "O Ioniq 5 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/2023_Hyundai_Ioniq_5_Sedan.jpg/1200px-2023_Hyundai_Ioniq_5_Sedan.jpg"
+                imagem: "https://www.razaoautomovel.com/wp-content/uploads/2021/03/hyundai_ioniq_5_57-1_925x520_acf_cropped-925x520.jpeg"
             },
             {
                 marca: "Nissan",
@@ -206,7 +206,7 @@ const Frota: React.FC = () => {
                 descricao: "O Leaf é um carro elétrico compacto da Nissan. Ele possui um motor elétrico de 150 cv, uma bateria de 40 kWh e um alcance de 270 km.",
                 informacao: "O Leaf está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/2023_Nissan_Leaf_Sedan.jpg/1200px-2023_Nissan_Leaf_Sedan.jpg"
+                imagem: "https://live.staticflickr.com/65535/52245896377_4caef3377c_b.jpg"
             },
             {
                 marca: "Peugeot",
@@ -214,7 +214,7 @@ const Frota: React.FC = () => {
                 descricao: "O e-208 é um carro elétrico compacto da Peugeot. Ele possui um motor elétrico de 136 cv, uma bateria de 50 kWh e um alcance de 340 km.",
                 informacao: "O e-208 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2023_Peugeot_e-208_Sedan.jpg/1200px-2023_Peugeot_e-208_Sedan.jpg"
+                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:1443:1443:nowe:587:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2022/09/27123600/peugeot-208-2022-087-fr-632daefee2312-6332a2e7f055e.jpeg"
             },
         ],
     };
