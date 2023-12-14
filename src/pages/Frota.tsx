@@ -28,6 +28,7 @@ interface Car {
     informacao: string;
     precodiario: string;
     imagem: string
+    loja : string
 }
 
 const generateRandomPrice = () => {
@@ -48,7 +49,8 @@ const Frota: React.FC = () => {
                 descricao: "O Jetta é um carro sedan médio da Volkswagen. Ele possui um motor 1.4 TSI de 150 cv, uma transmissão automática de 6 velocidades e um consumo médio de 6,0 litros por 100 km.",
                 informacao: "O Jetta está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Volkswagen_Jetta_VII_IMG_2964.jpg/1920px-Volkswagen_Jetta_VII_IMG_2964.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Volkswagen_Jetta_VII_IMG_2964.jpg/1920px-Volkswagen_Jetta_VII_IMG_2964.jpg",
+                loja : "Viana do Castelo"
             },
             {
                 marca: "Fiat",
@@ -56,7 +58,8 @@ const Frota: React.FC = () => {
                 descricao: "O Cronos é um carro sedan compacto da Fiat. Ele possui um motor 1.3 Firefly de 109 cv, uma transmissão manual de 5 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O Cronos está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/1/16/Fiat_Cronos_1.8_16V_E.Torq_Precision.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/1/16/Fiat_Cronos_1.8_16V_E.Torq_Precision.jpg",
+                loja : "Porto"
             },
             {
                 marca: "Chevrolet",
@@ -64,7 +67,8 @@ const Frota: React.FC = () => {
                 descricao: "O Onix Plus é um carro sedan compacto da Chevrolet. Ele possui um motor 1.0 Turbo de 116 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O Onix Plus está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://quatrorodas.abril.com.br/wp-content/uploads/2019/09/fgd_9712.tif_-e1569946637718.jpg?quality=70&strip=info"
+                imagem: "https://quatrorodas.abril.com.br/wp-content/uploads/2019/09/fgd_9712.tif_-e1569946637718.jpg?quality=70&strip=info",
+                loja : "Braga"
             },
             {
                 marca: "Hyundai",
@@ -72,7 +76,8 @@ const Frota: React.FC = () => {
                 descricao: "O HB20S é um carro sedan compacto da Hyundai. Ele possui um motor 1.0 Turbo de 120 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O HB20S está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png/1920px-2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png/1920px-2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png",
+                loja : "Lisboa"
             },
             {
                 marca: "Toyota",
@@ -80,7 +85,8 @@ const Frota: React.FC = () => {
                 descricao: "O Corolla é um carro sedan médio da Toyota. Ele possui um motor 2.0 aspirado de 165 cv, uma transmissão automática de CVT e um consumo médio de 6,5 litros por 100 km.",
                 informacao: "O Corolla está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/2019_Toyota_Corolla_XSE_%28MZEA12L%29_in_Blue_Flame%2C_front_left.jpg/1920px-2019_Toyota_Corolla_XSE_%28MZEA12L%29_in_Blue_Flame%2C_front_left.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/2019_Toyota_Corolla_XSE_%28MZEA12L%29_in_Blue_Flame%2C_front_left.jpg/1920px-2019_Toyota_Corolla_XSE_%28MZEA12L%29_in_Blue_Flame%2C_front_left.jpg",
+                loja : "Viana do Castelo"
             },
             {
                 marca: "Honda",
@@ -88,7 +94,8 @@ const Frota: React.FC = () => {
                 descricao: "O Civic é um carro sedã médio da Honda. Ele possui um motor 1.5 Turbo de 173 cv, uma transmissão automática de CVT e um consumo médio de 6,0 litros por 100 km.",
                 informacao: "O Civic está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2017_Honda_Civic_SR_VTEC_1.0_Front.jpg/1920px-2017_Honda_Civic_SR_VTEC_1.0_Front.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2017_Honda_Civic_SR_VTEC_1.0_Front.jpg/1920px-2017_Honda_Civic_SR_VTEC_1.0_Front.jpg",
+                loja : "Porto"
             }
             ],
         Desportivo: [
@@ -98,7 +105,8 @@ const Frota: React.FC = () => {
                 descricao: "O RS 3 é um carro esportivo compacto da Audi. Ele possui um motor 2.5 TFSI de 400 cv, uma transmissão automática de 7 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O RS 3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://cdn.easysite.pt/pub/12777/1122893/EDN_NCAUTO_24223270-0.jpg"
+                imagem: "https://cdn.easysite.pt/pub/12777/1122893/EDN_NCAUTO_24223270-0.jpg",
+                loja : "Braga"
             },
             {
                 marca: "BMW",
@@ -106,7 +114,8 @@ const Frota: React.FC = () => {
                 descricao: "O M2 é um carro esportivo compacto da BMW. Ele possui um motor 3.0 TwinPower Turbo de 410 cv, uma transmissão manual de 6 velocidades ou automática de 8 velocidades e um consumo médio de 8,0 litros por 100 km.",
                 informacao: "O M2 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://www.motor24.pt/files/2019/11/bmw-m2-cs.jpg"
+                imagem: "https://www.motor24.pt/files/2019/11/bmw-m2-cs.jpg",
+                loja : "Lisboa"
             },
             {
                 marca: "Mercedes-AMG",
@@ -114,7 +123,8 @@ const Frota: React.FC = () => {
                 descricao: "O A45 S é um carro esportivo compacto da Mercedes-AMG. Ele possui um motor 2.0 Turbo de 421 cv, uma transmissão automática de 8 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O A45 S está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://auto-drive.pt/wp-content/uploads/2020/04/posaidon-mercedes-amg-a45-with-518-hp-1.jpg"
+                imagem: "https://auto-drive.pt/wp-content/uploads/2020/04/posaidon-mercedes-amg-a45-with-518-hp-1.jpg",
+                loja : "Viana do Castelo"
             },
             {
                 marca: "Porsche",
@@ -122,7 +132,8 @@ const Frota: React.FC = () => {
                 descricao: "O 718 Cayman é um carro esportivo compacto da Porsche. Ele possui um motor 2.0 Turbo de 300 cv ou 350 cv, uma transmissão manual de 6 velocidades ou automática de 7 velocidades e um consumo médio de 7,0 a 7,5 litros por 100 km.",
                 informacao: "O 718 Cayman está disponível nas cores preto, branco, vermelho, azul, verde e amarelo.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://hips.hearstapps.com/hmg-prod/images/718-style-edition-18-1667334774.jpg?crop=0.598xw:0.671xh;0.244xw,0.0841xh&resize=768:*"
+                imagem: "https://hips.hearstapps.com/hmg-prod/images/718-style-edition-18-1667334774.jpg?crop=0.598xw:0.671xh;0.244xw,0.0841xh&resize=768:*",
+                loja : "Porto"
             },
             {
                 marca: "Audi",
@@ -130,7 +141,8 @@ const Frota: React.FC = () => {
                 descricao: "O RS Q8 é um carro esportivo SUV da Audi. Ele possui um motor 4.0 TFSI de 600 cv, uma transmissão automática de 8 velocidades e um consumo médio de 11,0 litros por 100 km.",
                 informacao: "O RS Q8 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://auto-drive.pt/wp-content/uploads/2022/04/08.webp"
+                imagem: "https://auto-drive.pt/wp-content/uploads/2022/04/08.webp",
+                loja : "Braga"
             }
         ],
         SUV: [
