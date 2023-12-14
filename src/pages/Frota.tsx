@@ -297,6 +297,11 @@ const Frota: React.FC = () => {
                                         <IonLabel><p>{selectedCar.descricao}</p></IonLabel>
                                     </IonCol>
                                 </IonRow>
+                                <IonRow>
+                                    <IonCol>
+                                        <IonLabel><p>{selectedCar.loja}</p></IonLabel>
+                                    </IonCol>
+                                </IonRow>
                                     <IonRow>
                                     <IonCol>
                                         <IonButton color={"red"} onClick={handleCloseModal}>Fechar</IonButton>
