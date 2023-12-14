@@ -87,7 +87,7 @@ return (
                                             <p>Happy Car Rent foi vencedor de melhor loja de alugamento de carros em Portugal!</p>
                                         </IonCardSubtitle>
                                     </IonCardHeader>
-                                    <IonButton fill="clear">Saber Mais</IonButton>
+                                    <IonButton className={"sabermais"} fill="clear">Saber Mais</IonButton>
                                 </IonCard>
                                     <IonCard>
                                         <IonCardHeader>
@@ -98,7 +98,7 @@ return (
                                                     <p>Aproveite o desconto de Black friday no alugamento de um veiculo a sua escolha!</p>
                                         </IonCardSubtitle>
                                     </IonCardHeader>
-                                <IonButton fill="clear">Saber Mais</IonButton>
+                                <IonButton className={"sabermais"} fill="clear">Saber Mais</IonButton>
                             </IonCard>
                         </IonText>
                     </IonCol>

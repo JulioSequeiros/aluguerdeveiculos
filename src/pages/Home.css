@@ -5,3 +5,7 @@ ion-button{
 ion-button:hover{
     background-color: orangered;
 }
+.sabermais{
+    background-color: grey;
+    color: white;
+}
