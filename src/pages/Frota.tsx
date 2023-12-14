@@ -309,7 +309,7 @@ const Frota: React.FC = () => {
                                 </IonRow>
                                 <IonRow>
                                     <IonCol>
-                                        <IonLabel><p>{selectedCar.loja}</p></IonLabel>
+                                        <IonLabel><p>Disponivel na seguinte loja: {selectedCar.loja}</p></IonLabel>
                                     </IonCol>
                                 </IonRow>
                                     <IonRow>
