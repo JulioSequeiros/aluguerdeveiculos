@@ -152,7 +152,8 @@ const Frota: React.FC = () => {
                 descricao: "O Q3 é um SUV compacto da Audi. Ele possui um motor 1.4 TSI de 150 cv, uma transmissão automática de 7 velocidades e um consumo médio de 7,0 litros por 100 km.",
                 informacao: "O Q3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://cf-cdn-v6-api.audi.at/files/951084a2348cbbfcbfa37fcfc84d5d841ae30477/f671e38e-4174-4e19-a2a1-5d955c40f620/1920x1080-audi-q3-ecirgbv22018audiq3stjohnsal14nosign?imwidth=768"
+                imagem: "https://cf-cdn-v6-api.audi.at/files/951084a2348cbbfcbfa37fcfc84d5d841ae30477/f671e38e-4174-4e19-a2a1-5d955c40f620/1920x1080-audi-q3-ecirgbv22018audiq3stjohnsal14nosign?imwidth=768",
+                loja: "Porto"
             },
             {
                 marca: "BMW",
@@ -160,7 +161,8 @@ const Frota: React.FC = () => {
                 descricao: "O X1 é um SUV compacto da BMW. Ele possui um motor 2.0 TwinPower Turbo de 184 cv, uma transmissão automática de 8 velocidades e um consumo médio de 7,5 litros por 100 km.",
                 informacao: "O X1 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BMW_U11_1X7A6826.jpg/1920px-BMW_U11_1X7A6826.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BMW_U11_1X7A6826.jpg/1920px-BMW_U11_1X7A6826.jpg",
+                loja: "Braga"
             },
             {
                 marca: "Mercedes-Benz",
@@ -168,7 +170,8 @@ const Frota: React.FC = () => {
                 descricao: "O GLA é um SUV compacto da Mercedes-Benz. Ele possui um motor 1.3 Turbo de 160 cv, uma transmissão automática de 7 velocidades e um consumo médio de 6,5 litros por 100 km.",
                 informacao: "O GLA está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mercedes-Benz_H247_IMG_2800.jpg/1280px-Mercedes-Benz_H247_IMG_2800.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Mercedes-Benz_H247_IMG_2800.jpg/1280px-Mercedes-Benz_H247_IMG_2800.jpg",
+                loja: "Viana do Castelo"
             },
             {
                 marca: "Volkswagen",
@@ -176,7 +179,8 @@ const Frota: React.FC = () => {
                 descricao: "O T-Cross é um SUV compacto da Volkswagen. Ele possui um motor 1.0 TSI de 116 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 6,0 litros por 100 km.",
                 informacao: "O T-Cross está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg/1920px-2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg/1920px-2019_Volkswagen_T-Cross_First_Edition_TSi_1.0.jpg",
+                loja: "Lisboa"
             },
             {
                 marca: "Peugeot",
@@ -184,7 +188,8 @@ const Frota: React.FC = () => {
                 descricao: "O 2008 é um SUV compacto da Peugeot. Ele possui um motor 1.2 PureTech de 110 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O 2008 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/2020_Peugeot_2008_Allure_Front.jpg/1920px-2020_Peugeot_2008_Allure_Front.jpg"
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/2020_Peugeot_2008_Allure_Front.jpg/1920px-2020_Peugeot_2008_Allure_Front.jpg",
+                loja: "Porto"
             },
         ],
         Eletrico: [
@@ -194,7 +199,8 @@ const Frota: React.FC = () => {
                 descricao: "O Model 3 é um carro elétrico compacto da Tesla. Ele possui um motor elétrico de 286 cv, uma bateria de 58 kWh e um alcance de 460 km.",
                 informacao: "O Model 3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc9TuB0VRlXBTMqS9ZX8G-ohe_9QIccgYlWXuXuqvplCI_qYaTUB78aUeCIk4zu97nIPGgZjZpgjFanqCh5QREuEmq7fROlwS7MyDzB2ar4ud0NGNhR5SWihnIvSxB2V_T5Qe3u9aismr_qXhrflwVfUIyP11hSYUBYY0wjrgh9hbXAXo3O2MqOOmfqXID/s1600/model3highland.jpg"
+                imagem: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc9TuB0VRlXBTMqS9ZX8G-ohe_9QIccgYlWXuXuqvplCI_qYaTUB78aUeCIk4zu97nIPGgZjZpgjFanqCh5QREuEmq7fROlwS7MyDzB2ar4ud0NGNhR5SWihnIvSxB2V_T5Qe3u9aismr_qXhrflwVfUIyP11hSYUBYY0wjrgh9hbXAXo3O2MqOOmfqXID/s1600/model3highland.jpg",
+                loja: "Viana do Castelo"
             },
             {
                 marca: "Volkswagen",
@@ -202,7 +208,8 @@ const Frota: React.FC = () => {
                 descricao: "O ID.3 é um carro elétrico compacto da Volkswagen. Ele possui um motor elétrico de 204 cv, uma bateria de 58 kWh e um alcance de 420 km.",
                 informacao: "O ID.3 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:750:750:nowe:383:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2021/01/25095205/volkswagen-id3-2020-2-14-min.jpg"
+                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:750:750:nowe:383:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2021/01/25095205/volkswagen-id3-2020-2-14-min.jpg",
+                loja: "Lisboa"
             },
             {
                 marca: "Hyundai",
@@ -210,7 +217,8 @@ const Frota: React.FC = () => {
                 descricao: "O Ioniq 5 é um carro elétrico compacto da Hyundai. Ele possui um motor elétrico de 218 cv, uma bateria de 77,4 kWh e um alcance de 480 km.",
                 informacao: "O Ioniq 5 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://www.razaoautomovel.com/wp-content/uploads/2021/03/hyundai_ioniq_5_57-1_925x520_acf_cropped-925x520.jpeg"
+                imagem: "https://www.razaoautomovel.com/wp-content/uploads/2021/03/hyundai_ioniq_5_57-1_925x520_acf_cropped-925x520.jpeg",
+                loja: "Braga"
             },
             {
                 marca: "Nissan",
@@ -218,7 +226,8 @@ const Frota: React.FC = () => {
                 descricao: "O Leaf é um carro elétrico compacto da Nissan. Ele possui um motor elétrico de 150 cv, uma bateria de 40 kWh e um alcance de 270 km.",
                 informacao: "O Leaf está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://live.staticflickr.com/65535/52245896377_4caef3377c_b.jpg"
+                imagem: "https://live.staticflickr.com/65535/52245896377_4caef3377c_b.jpg",
+                loja: "Viana do Castelo"
             },
             {
                 marca: "Peugeot",
@@ -226,7 +235,8 @@ const Frota: React.FC = () => {
                 descricao: "O e-208 é um carro elétrico compacto da Peugeot. Ele possui um motor elétrico de 136 cv, uma bateria de 50 kWh e um alcance de 340 km.",
                 informacao: "O e-208 está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:1443:1443:nowe:587:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2022/09/27123600/peugeot-208-2022-087-fr-632daefee2312-6332a2e7f055e.jpeg"
+                imagem: "https://bordalo.observador.pt/v2/rs:fill:900/c:1443:1443:nowe:587:0/q:86/plain/https://s3.observador.pt/wp-content/uploads/2022/09/27123600/peugeot-208-2022-087-fr-632daefee2312-6332a2e7f055e.jpeg",
+                loja: "Porto"
             },
         ],
     };
