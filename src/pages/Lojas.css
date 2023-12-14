@@ -2,7 +2,7 @@ ion-item {
     --padding-start: 0;
 }
 ion-button{
-    background-color: grey;
+    background-color: limegreen;
 }
 
 ion-button:hover{

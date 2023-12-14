@@ -11,7 +11,7 @@ import {
 import { Geolocation } from '@capacitor/geolocation';
 import { logoIonic } from 'ionicons/icons';
 import React, {useEffect, useState} from "react";
-
+import './Home.css';
 const Home: React.FC = () => {
 
     const [latitude, setLatitude] = useState(null);
@@ -62,7 +62,7 @@ return (
                                 <IonIcon name="pin-outline"></IonIcon>
                             </IonCol>
                             <IonCol>
-                                <IonButton>
+                                <IonButton color={"red"}>
                                     <IonIcon slot="icon-only" name="map" />
                                     Navegar para a loja mais próxima
                                 </IonButton>
@@ -71,7 +71,7 @@ return (
                                 <IonIcon name="car-outline"></IonIcon>
                             </IonCol>
                             <IonCol>
-                                <IonButton routerLink="./Frota">
+                                <IonButton routerLink="./Frota" color={"red"}>
                                     <IonIcon slot="icon-only" name="car" />
                                     Conheça nossos novos carros
                                 </IonButton>

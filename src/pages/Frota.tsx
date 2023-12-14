@@ -261,7 +261,7 @@ const Frota: React.FC = () => {
                                             <IonCardTitle>{car.marca}</IonCardTitle>
                                             <IonCardSubtitle>{car.modelo}</IonCardSubtitle>
                                         </IonCardHeader>
-                                    <IonCardContent><IonButton onClick={() => handleOpenModal(car)}>Mais informações</IonButton></IonCardContent>
+                                    <IonCardContent><IonButton color={"red"} onClick={() => handleOpenModal(car)}>Mais informações</IonButton></IonCardContent>
                                 </IonCard>
                             </IonItem>
                         ))}
@@ -287,11 +287,11 @@ const Frota: React.FC = () => {
                                 </IonRow>
                                     <IonRow>
                                     <IonCol>
-                                        <IonButton onClick={handleCloseModal}>Fechar</IonButton>
+                                        <IonButton color={"red"} onClick={handleCloseModal}>Fechar</IonButton>
                                     </IonCol>
                                     <IonCol>
                                         <IonText>Preço P/Dia:</IonText>
-                                        <IonButton onClick={handleCloseModal}>Alugar: {selectedCar.precodiario}</IonButton>
+                                        <IonButton color={"red"} onClick={handleCloseModal}>Alugar: {selectedCar.precodiario}</IonButton>
                                     </IonCol>
                                 </IonRow>
                             </IonGrid>
