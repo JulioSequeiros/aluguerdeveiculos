@@ -62,7 +62,7 @@ return (
                                 <IonIcon name="pin-outline"></IonIcon>
                             </IonCol>
                             <IonCol>
-                                <IonButton color={"red"}>
+                                <IonButton routerLink="./Lojas" color={"red"}>
                                     <IonIcon slot="icon-only" name="map" />
                                     Navegar para a loja mais próxima
                                 </IonButton>
