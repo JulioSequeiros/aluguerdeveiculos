@@ -1,0 +1,7 @@
+ion-button{
+    background-color: limegreen;
+}
+
+ion-button:hover{
+    background-color: orangered;
+}
