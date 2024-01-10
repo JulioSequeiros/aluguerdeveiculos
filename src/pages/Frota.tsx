@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     IonButtons,
     IonContent,
@@ -35,7 +35,20 @@ import './Frota.css';
 const Frota: React.FC = () => {
     const { name } = useParams<{ name: string }>();
     const [showModal, setShowModal] = useState(false);
-    const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+    const [carro, setCarro] = useState<carro[]>([]);
+
+    useEffect(() => {
+        const fetchCarro = async () =>{
+            try {
+                const response = await fetch('http://localhost:3080/Lojas/carro')
+                const data = await response.json();
+                setCarro(data);
+            } catch (error) {
+                console.error('Erro ao buscar informação', error);
+            }
+        };
+        fetchCarro();
+    }, []);
 
     /*const carsByCategory = {
         Sedan: [
@@ -237,7 +250,7 @@ const Frota: React.FC = () => {
         ],
     };*/
 
-    const handleOpenModal = (car: Car) => {
+    const handleOpenModal = (carro: Car) => {
         setSelectedCar(car);
         setShowModal(true);
     };
