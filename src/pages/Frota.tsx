@@ -21,7 +21,7 @@ import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Frota.css';
 
-interface Car {
+/*interface Car {
     marca: string;
     modelo: string;
     descricao: string;
@@ -29,19 +29,15 @@ interface Car {
     precodiario: string;
     imagem: string
     loja : string
-}
+}*/
 
-const generateRandomPrice = () => {
-    const randomPrice = (Math.random() * (150 - 50) + 50).toFixed(2);
-    return `€${randomPrice}`;
-};
 
 const Frota: React.FC = () => {
     const { name } = useParams<{ name: string }>();
     const [showModal, setShowModal] = useState(false);
     const [selectedCar, setSelectedCar] = useState<Car | null>(null);
 
-    const carsByCategory = {
+    /*const carsByCategory = {
         Sedan: [
             {
                 marca: "Volkswagen",
@@ -67,7 +63,7 @@ const Frota: React.FC = () => {
                 descricao: "O Onix Plus é um carro sedan compacto da Chevrolet. Ele possui um motor 1.0 Turbo de 116 cv, uma transmissão manual de 6 velocidades ou automática de 6 velocidades e um consumo médio de 5,5 litros por 100 km.",
                 informacao: "O Onix Plus está disponível nas cores preto, branco, vermelho e azul.",
                 precodiario: generateRandomPrice(),
-                imagem: "https://quatrorodas.abril.com.br/wp-content/uploads/2019/09/fgd_9712.tif_-e1569946637718.jpg?quality=70&strip=info",
+                imagem: "npx prisma migrate up",
                 loja : "Braga"
             },
             {
@@ -239,7 +235,7 @@ const Frota: React.FC = () => {
                 loja: "Porto"
             },
         ],
-    };
+    };*/
 
     const handleOpenModal = (car: Car) => {
         setSelectedCar(car);

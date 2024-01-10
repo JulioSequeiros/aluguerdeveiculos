@@ -14,23 +14,26 @@ import {
     IonCardContent, IonToolbar, IonSearchbar, IonButton, IonPage, IonLabel, IonMenuButton, IonGrid, IonRow, IonCol,
 } from '@ionic/react';
 import './Lojas.css';
-interface Store {
+
+/*interface Store {
     name: string;
     address: string;
     imagem: string;
     descricao: string;
     email: string;
     telefone: number;
-}
+}*/
 
-function IonSubtitle(props: { children: ReactNode }) {
-    return null;
-}
 
 const Lojas: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
 
+    const fetchLojas = async () => {
+        try {
+            const reponse = await fetch('http://localhost:3000/lojas')
+        }
+    }
 
     const handleOpenModal = (store: Store) => {
         setSelectedStore(store);
@@ -44,7 +47,9 @@ const Lojas: React.FC = () => {
     const handleExitModal = () => {
         setShowModal(false);
     };
-    const stores = [
+
+
+    /*const stores = [
         {
             name: "Viana",
             address: "Rua da Loja, 123, Viana do Castelo",
@@ -85,7 +90,7 @@ const Lojas: React.FC = () => {
             email: "happynewcar.lisboa@happynewcar.pt",
             telefone: 258800400,
         },
-    ];
+    ];*/
 
     return (
         <IonPage>
