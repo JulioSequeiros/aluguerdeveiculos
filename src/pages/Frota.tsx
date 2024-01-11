@@ -29,6 +29,7 @@ interface Car {
     precodiario: string;
     imagem: string
     loja : string
+    tipo : string
 }
 
 
@@ -280,23 +281,21 @@ const Frota: React.FC = () => {
                 </IonHeader>
                 <ExploreContainer name={name} />
 
-                {Object.entries(carro).map(([category, carList]) => (
-                    <IonList key={category}>
+                {Object.entries(carro).map(([category, carro]) => (
+                    <IonList key={carro.tipo}>
                         <IonItem>
-                            <IonTitle>{category}</IonTitle>
+                            <IonTitle>{carro.tipo}</IonTitle>
                         </IonItem>
-                        {carro.map((car, index) => (
-                            <IonItem key={index}>
+                            <IonItem>
                                 <IonCard>
-                                    <IonImg src={car.imagem}></IonImg>
+                                    <IonImg src={carro.imagem}></IonImg>
                                         <IonCardHeader>
-                                            <IonCardTitle>{car.marca}</IonCardTitle>
-                                            <IonCardSubtitle>{car.modelo}</IonCardSubtitle>
+                                            <IonCardTitle>{carro.marca}</IonCardTitle>
+                                            <IonCardSubtitle>{carro.modelo}</IonCardSubtitle>
                                         </IonCardHeader>
-                                    <IonCardContent><IonButton color={"red"} onClick={() => handleOpenModal(car)}>Mais informações</IonButton></IonCardContent>
+                                    <IonCardContent><IonButton color={"red"} onClick={() => handleOpenModal(carro)}>Mais informações</IonButton></IonCardContent>
                                 </IonCard>
                             </IonItem>
-                        ))}
                     </IonList>
                 ))}
 
