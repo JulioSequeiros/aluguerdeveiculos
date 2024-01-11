@@ -21,7 +21,7 @@ import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Frota.css';
 
-/*interface Car {
+interface Car {
     marca: string;
     modelo: string;
     descricao: string;
@@ -29,25 +29,26 @@ import './Frota.css';
     precodiario: string;
     imagem: string
     loja : string
-}*/
+}
 
 
 const Frota: React.FC = () => {
     const { name } = useParams<{ name: string }>();
     const [showModal, setShowModal] = useState(false);
-    const [carro, setCarro] = useState<carro[]>([]);
+    const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+    const [carro, setCarros] = useState<Car[]>([]);
 
     useEffect(() => {
-        const fetchCarro = async () =>{
+        const fetchCarros = async () =>{
             try {
-                const response = await fetch('http://localhost:3080/Lojas/carro')
+                const response = await fetch('http://localhost:3000/carros')
                 const data = await response.json();
-                setCarro(data);
+                setCarros(data);
             } catch (error) {
                 console.error('Erro ao buscar informação', error);
             }
         };
-        fetchCarro();
+        fetchCarros();
     }, []);
 
     /*const carsByCategory = {
@@ -251,7 +252,7 @@ const Frota: React.FC = () => {
     };*/
 
     const handleOpenModal = (carro: Car) => {
-        setSelectedCar(car);
+        setSelectedCar(carro);
         setShowModal(true);
     };
 
@@ -279,12 +280,12 @@ const Frota: React.FC = () => {
                 </IonHeader>
                 <ExploreContainer name={name} />
 
-                {Object.entries(carsByCategory).map(([category, carList]) => (
+                {Object.entries(carro).map(([category, carList]) => (
                     <IonList key={category}>
                         <IonItem>
                             <IonTitle>{category}</IonTitle>
                         </IonItem>
-                        {carList.map((car, index) => (
+                        {carro.map((car, index) => (
                             <IonItem key={index}>
                                 <IonCard>
                                     <IonImg src={car.imagem}></IonImg>

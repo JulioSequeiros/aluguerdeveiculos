@@ -1,4 +1,4 @@
-import React, {ReactNode, useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import {
     IonButtons,
     IonContent,
@@ -15,25 +15,34 @@ import {
 } from '@ionic/react';
 import './Lojas.css';
 
-/*interface Store {
+interface Store {
     name: string;
     address: string;
     imagem: string;
     descricao: string;
     email: string;
     telefone: number;
-}*/
+}
 
 
 const Lojas: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
+    const [ Lojas, setLojas ] = useState<Store[]>([])
 
-    const fetchLojas = async () => {
-        try {
-            const reponse = await fetch('http://localhost:3000/lojas')
-        }
-    }
+    useEffect(() => {
+        const fetchLojas = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/lojas');
+                const data = await response.json();
+                setLojas(data);
+            } catch (error) {
+                console.error('Erro a buscar as lojas:', error);
+            }
+        };
+        fetchLojas();
+    }, []);
+
 
     const handleOpenModal = (store: Store) => {
         setSelectedStore(store);
@@ -105,7 +114,7 @@ const Lojas: React.FC = () => {
 
             <IonContent fullscreen>
                 <IonList>
-                    {stores.map((store, index) => (
+                    {Lojas.map((store, index) => (
                         <IonItem key={index}>
                             <IonGrid fixed={true}>
                                 <IonRow>
