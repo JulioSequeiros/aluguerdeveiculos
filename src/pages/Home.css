@@ -1,5 +1,6 @@
 ion-button{
     background-color: limegreen;
+    align-content: center;
 }
 
 ion-button:hover{
@@ -8,4 +9,8 @@ ion-button:hover{
 .sabermais{
     background-color: grey;
     color: white;
+}
+
+h2{
+    text-align: center;
 }

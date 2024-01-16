@@ -9,6 +9,11 @@ import {
     IonToolbar,
 } from "@ionic/react";
 import { Geolocation } from '@capacitor/geolocation';
+import {
+    GoogleMap,
+    LoadScript,
+    Marker,
+} from '@react-google-maps/api';
 import { logoIonic } from 'ionicons/icons';
 import React, {useEffect, useState} from "react";
 import './Home.css';
@@ -16,18 +21,10 @@ const Home: React.FC = () => {
 
     const [latitude, setLatitude] = useState(null);
     const [longitude, setLongitude] = useState(null);
-    const [store, setStore] = useState({
-        latitude: 0,
-        longitude: 0,
-        name: 'Loja mais próxima',
-        address: 'Rua da Loja, 123',
-        phone: '(123) 456-7890'
-    });
+    const [store, setStore] = useState({});
 
     useEffect(() => {
-        // Obter a localização do usuário
         Geolocation.getCurrentPosition().then((position) => {
-            // Atualizar a localização da loja mais próxima
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
         });
@@ -50,6 +47,31 @@ return (
                 </IonToolbar>
             </IonHeader>
             <IonImg src="https://cdn.discordapp.com/attachments/1021814484437835837/1184194027667607622/loja.jpg?ex=658b15a1&is=6578a0a1&hm=b5edc80d1fc2e116eb36cf1206f078e58a882a11c9d5cebbcda58fa66d593a67&" />
+
+            <div>
+                <h2>Lojas</h2>
+                <LoadScript googleMapsApiKey="AIzaSyAMcfkuNJPDUzehSoFZBQeXIuGL91jfkvk">
+                <GoogleMap
+                    mapContainerStyle={{
+                        width: '100%',
+                        height: '300px',
+                    }}
+                    center={{ lat: latitude || 0, lng: longitude || 0 }}
+                    zoom={15}
+                >
+                    {/*Viana Do Castelo*/}
+                    {latitude && longitude && (
+                        <Marker position={{ lat: 41.69170549382038, lng: -8.834516997033361 }} />)}
+                    {/*Braga*/}
+                    {latitude && longitude && (
+                        <Marker position={{ lat: 41.54572316918318, lng: -8.427901896581135 }} />)}
+                    {/*Porto*/}
+                    {latitude && longitude && (
+                        <Marker position={{ lat: 41.15665233670994, lng: -8.637226158590055 }} />)}
+                </GoogleMap>
+            </LoadScript>
+            </div>
+
             <IonGrid>
             <IonRow>
                 <IonCol>

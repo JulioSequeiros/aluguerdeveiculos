@@ -50,6 +50,7 @@ const App: React.FC = () => {
             <Route path="/Frota" exact={true}>
               <Frota/>
             </Route>
+            <Route path="/frota/:lojaId" component={Frota} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

@@ -38,6 +38,7 @@ const Frota: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedCar, setSelectedCar] = useState<Car | null>(null);
     const [carro, setCarros] = useState<Car[]>([]);
+    const { lojaId } = useParams<{ lojaId: string }>();
 
     useEffect(() => {
         const fetchCarros = async () =>{
@@ -262,6 +263,8 @@ const Frota: React.FC = () => {
         setSelectedCar(null);
     };
 
+    const carrosFiltrados = carro.filter(carro => carro.loja === lojaId);
+
     return (
         <IonPage>
             <IonHeader>
@@ -282,10 +285,8 @@ const Frota: React.FC = () => {
                 <ExploreContainer name={name} />
 
                 {Object.entries(carro).map(([category, carro]) => (
-                    <IonList key={carro.tipo}>
-                        <IonItem>
-                            <IonTitle>{carro.tipo}</IonTitle>
-                        </IonItem>
+                    <IonList>
+                        <IonTitle>{carro.tipo}</IonTitle>
                             <IonItem>
                                 <IonCard>
                                     <IonImg src={carro.imagem}></IonImg>
@@ -293,7 +294,9 @@ const Frota: React.FC = () => {
                                             <IonCardTitle>{carro.marca}</IonCardTitle>
                                             <IonCardSubtitle>{carro.modelo}</IonCardSubtitle>
                                         </IonCardHeader>
-                                    <IonCardContent><IonButton color={"red"} onClick={() => handleOpenModal(carro)}>Mais informações</IonButton></IonCardContent>
+                                    <IonCardContent>
+                                        <IonButton color={"red"} onClick={() => handleOpenModal(carro)}>Mais informações</IonButton>
+                                    </IonCardContent>
                                 </IonCard>
                             </IonItem>
                     </IonList>
@@ -318,7 +321,7 @@ const Frota: React.FC = () => {
                                 </IonRow>
                                 <IonRow>
                                     <IonCol>
-                                        <IonLabel><p>Disponivel na seguinte loja: {selectedCar.loja}</p></IonLabel>
+                                        <IonLabel><p>Disponivel na seguinte loja: </p></IonLabel>
                                     </IonCol>
                                 </IonRow>
                                     <IonRow>
